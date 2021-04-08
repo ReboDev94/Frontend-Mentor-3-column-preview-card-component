@@ -1,0 +1,125 @@
+:root {
+    --font-primary: "Lexend Deca", sans-serif;
+    --font-secondary: "Big Shoulders Display", cursive;
+    --font-size-body: 15px;
+    --font-size-h1: 2.5rem;
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --verydarkcyan: hsl(179, 100%, 13%);
+    --white: hsl(0, 0%, 95%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.75);
+}
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+}
+
+.card__1 {
+    background-color: var(--brightOrange);
+}
+.card__2 {
+    background-color: var(--darkCyan);
+}
+.card__3 {
+    background-color: var(--verydarkcyan);
+}
+
+.card__text {
+    line-height: 1.5rem;
+}
+
+.card h1 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-h1);
+    color: var(--white);
+}
+.card p {
+    color: var(--transparentWhite);
+    margin: 0;
+    margin-bottom: 3rem;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid var(--white);
+    border-radius: 25px;
+    padding: 10px 25px;
+    background-color: var(--white);
+}
+.card a:hover {
+    border: 3px solid var(--white);
+    color: var(--white);
+    background-color: transparent;
+}
+
+.card__1 a {
+    color: var(--brightOrange);
+}
+.card__2 a {
+    color: var(--darkCyan);
+}
+.card__3 a {
+    color: var(--verydarkcyan);
+}
+
+.cards {
+    padding: 50px 20px;
+    display: flex;
+}
+
+.card {
+    padding: 3rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .cards .card:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+    .cards .card:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        width: 1000px;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+
+    .cards .card:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+    .cards .card:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+}
